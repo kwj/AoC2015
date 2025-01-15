@@ -18,7 +18,7 @@ let parseFile (data: array<string>) =
 
     let nPersons = persons.Count + 1 // Increase by 1 because make myself as the last invited guest.
     let personIdMap = persons |> Set.toSeq |> Seq.mapi (fun i x -> (x, i)) |> Map
-    let adjMatrix = Array2D.create nPersons nPersons -infinity
+    let adjMatrix = Array2D.create nPersons nPersons 0.0
 
     happiness
     |> List.iter (fun (p1, p2, v) ->
