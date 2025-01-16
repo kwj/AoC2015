@@ -20,8 +20,9 @@ let parseFile (data: array<string>) =
 
     distInfo
     |> List.iter (fun (p1, p2, dist) ->
-        adjMatrix[locIdMap[p1], locIdMap[p2]] <- dist
-        adjMatrix[locIdMap[p2], locIdMap[p1]] <- dist)
+        let x, y = locIdMap[p1], locIdMap[p2]
+        adjMatrix[x, y] <- dist
+        adjMatrix[y, x] <- dist)
 
     nLocs, adjMatrix
 

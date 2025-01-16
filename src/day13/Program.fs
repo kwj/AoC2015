@@ -22,8 +22,9 @@ let parseFile (data: array<string>) =
 
     happiness
     |> List.iter (fun (p1, p2, v) ->
-        adjMatrix[personIdMap[p1], personIdMap[p2]] <- adjMatrix[personIdMap[p1], personIdMap[p2]] + v
-        adjMatrix[personIdMap[p2], personIdMap[p1]] <- adjMatrix[personIdMap[p2], personIdMap[p1]] + v)
+        let x, y = personIdMap[p1], personIdMap[p2]
+        adjMatrix[x, y] <- adjMatrix[x, y] + v
+        adjMatrix[y, x] <- adjMatrix[y, x] + v)
 
     nPersons, adjMatrix
 
