@@ -40,7 +40,7 @@ let classifySbs (n: int) (bitSet: int) =
 // This problem is a maximum traveling salesman problem.
 let runDP (n: int) (adjMatrix: float array2d) =
     let dpTbl = Array2D.create (1 <<< n) n -infinity
-    dpTbl[1, 0] <- 0
+    dpTbl[1, 0] <- 0 // Start from a person with an index of 0
 
     for bitSet = 1 to (1 <<< n) - 1 do
         let visited, unVisited = classifySbs n bitSet
@@ -61,7 +61,7 @@ let partOne (n: int) (adjMatrix: float array2d) (dpTbl: float array2d) =
 
     // ditto
     seq { 0 .. (n - 1) - 1 }
-    |> Seq.map (fun x -> result[x] + adjMatrix[x, 0])
+    |> Seq.map (fun x -> result[x] + adjMatrix[x, 0]) // Circle back to a person with an index of 0
     |> Seq.max
     |> int
 
@@ -69,7 +69,7 @@ let partTwo (n: int) (adjMatrix: float array2d) (dpTbl: float array2d) =
     let result = dpTbl[(1 <<< n) - 1, *]
 
     seq { 0 .. n - 1 }
-    |> Seq.map (fun x -> result[x] + adjMatrix[x, 0])
+    |> Seq.map (fun x -> result[x] + adjMatrix[x, 0]) // Circle back to a person with an index of 0
     |> Seq.max
     |> int
 
