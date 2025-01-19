@@ -5,8 +5,10 @@
 >>> import math
 >>> math.log2(33554393 * 33554393)
 49.999996646336356
->>> log2(33554393 * 20151125)
+>>> math.log2(33554393 * 20151125)
 49.264355371374386
+
+Okay, I'll use uint64.
 *)
 
 open System.Text.RegularExpressions

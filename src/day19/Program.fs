@@ -134,7 +134,7 @@ If this doesn't work well, how about searching from the back instead of the fron
 But there is no basis for this idea.
 
 I feel that a practical option is to use a randomized algorithm (no priority rules).
-I know the name of the CYK (Cocke-Youngger-Kasami) algorithm, but not what is in it.
+I know the name of the CYK algorithm and the Early parser, but not what is in it.
 *)
 let reorderByPriority (revLst: list<string * string>) =
     let reCLetter = Regex(@"[A-Z]", RegexOptions.Compiled)
