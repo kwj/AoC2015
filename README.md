@@ -4,7 +4,7 @@ URL: https://adventofcode.com/2015
 
 ## Solutions
 
-All solutions were written in F# 9. I used .NET 9.0.1 (SDK 9.0.102).
+All solutions were written in F# 10. I used .NET 10.0.0 (SDK 10.0.100).
 
 * [Day 1: Not Quite Lisp](./src/day01/Program.fs)
 * [Day 2: I Was Told There Would Be No Math](./src/day02/Program.fs)

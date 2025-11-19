@@ -9,7 +9,7 @@ sol=$(printf "day%02d" $1)
 
 folder="./src/${sol}"
 config="Release"
-runtime="net9.0"
+runtime="net10.0"
 exe="${folder}/bin/${config}/${runtime}/${sol}"
 
 if [ ! -x ${exe} ]; then

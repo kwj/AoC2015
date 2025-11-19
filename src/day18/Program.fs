@@ -21,8 +21,8 @@ let oneCycle (grid: int array2d) =
 
     let nNbrs (r: int) (c: int) =
         seq {
-            for dr in { -1 .. 1 } do
-                for dc in { -1 .. 1 } do
+            for dr in seq { -1 .. 1 } do
+                for dc in seq { -1 .. 1 } do
                     yield pickup (r + dr) (c + dc)
         }
         |> Seq.sum
@@ -61,7 +61,7 @@ let countupGrid (grid: int array2d) =
     acc
 
 let partOne (grid: int array2d) (nSteps: int) =
-    { 1..nSteps } |> Seq.fold (fun g _ -> oneCycle g) grid |> countupGrid
+    seq { 1..nSteps } |> Seq.fold (fun g _ -> oneCycle g) grid |> countupGrid
 
 let partTwo (grid: int array2d) (nSteps: int) =
     let corners (grid: int array2d) =
@@ -71,7 +71,7 @@ let partTwo (grid: int array2d) (nSteps: int) =
         grid[nRows - 1, nCols - 1] <- 1
         grid
 
-    { 1..nSteps }
+    seq { 1..nSteps }
     |> Seq.fold (fun g _ -> oneCycle g |> corners) (corners grid)
     |> countupGrid
 
