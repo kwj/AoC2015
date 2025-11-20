@@ -1,3 +1,4 @@
+SLN=AoC2015.slnx
 
 .PHONY: usage
 usage:
@@ -11,13 +12,13 @@ usage:
 
 .PHONY: restore
 restore:
-	@dotnet restore AoC2015.sln
+	@dotnet restore $(SLN)
 
 .PHONY: build
 build:
-	@dotnet build AoC2015.sln -c Release --no-restore
+	@dotnet build $(SLN) -c Release --no-restore
 
 .PHONY: clean
 clean:
-	@dotnet clean AoC2015.sln -c Release
+	@dotnet clean $(SLN) -c Release
 	@find . -name '*~' -o -name '#*' | xargs -r rm

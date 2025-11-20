@@ -1,0 +1,30 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/day01/day01.fsproj" />
+    <Project Path="src/day02/day02.fsproj" />
+    <Project Path="src/day03/day03.fsproj" />
+    <Project Path="src/day04/day04.fsproj" />
+    <Project Path="src/day05/day05.fsproj" />
+    <Project Path="src/day06/day06.fsproj" />
+    <Project Path="src/day07/day07.fsproj" />
+    <Project Path="src/day08/day08.fsproj" />
+    <Project Path="src/day09/day09.fsproj" />
+    <Project Path="src/day10/day10.fsproj" />
+    <Project Path="src/day11/day11.fsproj" />
+    <Project Path="src/day12/day12.fsproj" />
+    <Project Path="src/day13/day13.fsproj" />
+    <Project Path="src/day14/day14.fsproj" />
+    <Project Path="src/day15/day15.fsproj" />
+    <Project Path="src/day16/day16.fsproj" />
+    <Project Path="src/day17/day17.fsproj" />
+    <Project Path="src/day18/day18.fsproj" />
+    <Project Path="src/day19/day19.fsproj" />
+    <Project Path="src/day20/day20.fsproj" />
+    <Project Path="src/day21/day21.fsproj" />
+    <Project Path="src/day22/day22.fsproj" />
+    <Project Path="src/day23/day23.fsproj" />
+    <Project Path="src/day24/day24.fsproj" />
+    <Project Path="src/day25/day25.fsproj" />
+    <Project Path="src/lib/lib.fsproj" />
+  </Folder>
+</Solution>
